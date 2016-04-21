@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <clock-ctrl id="time" class="time" title="Current Time:"></clock-ctrl>
+</div>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<!--<script src="lib/vue/dist/vue.min.js"></script>-->
+<!--<script src="lib/moment/min/moment-with-locales.min.js"></script>-->
+<script src="dist/vendor.js"></script>
+<script src="dist/app.js"></script>
+<script>
+    $(function () {
+        App.mount('#app');
+        var timeClockCtrl = App.ctrlById('time');
+        console.log(timeClockCtrl.title);
+        timeClockCtrl.title = 'Time';
+    });
+</script>
+</body>
+</html>
